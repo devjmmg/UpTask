@@ -1,0 +1,103 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.sidebar {
+    
+    .contenedor-sidebar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+    }
+    
+    .cerrar-menu {
+        
+        @include m.tablet {
+            visibility: hidden;
+        }
+        
+        img {
+            width: 5rem;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+    }
+    
+    opacity: 0;
+    background-color: v.$naranja;
+    overflow: hidden;
+    transition: opacity .5s ease;
+    height: 0;
+    
+    @include m.tablet {
+        height: 100%;
+        opacity: 1;
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        
+        color: v.$blanco;
+        margin: 0;
+        text-align: center;
+    }
+    
+    &.mostrar{
+        padding: 1.5rem;
+        opacity: 1;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        //background-color: rgba(0 0 0 / .8);
+        @include m.tablet {
+            display: none;
+        }
+    }
+    &.ocultar {
+        opacity: 0;
+    }
+
+    .close-sesion {
+
+        margin-top: 10rem;
+
+        @include m.tablet {
+            display: none;
+        }
+
+        a{
+            @include m.boton(v.$blanco,v.$naranja);
+            border-radius: 1rem;
+        }
+
+    }
+    
+}
+
+.sidebar-nav {
+    
+    margin-top: 5rem;
+    
+    a {
+        color: v.$blanco;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        transition: background-color .3s ease-in-out;
+        
+        &:hover,
+        &.activo {
+            background-color: v.$negro;
+        }
+    }
+    
+}

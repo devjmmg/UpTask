@@ -1,0 +1,71 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.barra-mobile {
+    
+    background-color: v.$naranja;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include m.tablet {
+        display: none;
+    }
+    
+    h1 {
+        color: v.$blanco;
+        margin: 0;
+        font-size: 5rem;
+    }
+    
+    .menu-mobile {
+        
+        img {
+            width: 5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+    }
+    
+}
+
+.barra {
+    
+    display: none;
+    
+    @include m.tablet {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 3rem;
+        box-shadow: 1px 1px 2px 0px rgba(0,0,0,.5);
+        
+    }
+    
+    
+    p{
+        margin: 1.5rem 0;
+        font-size: 1.6rem;
+        
+        span {
+            
+            font-weight: 700;
+            color: v.$naranja;
+            
+        }
+        
+    }
+}
+
+.cerrar-sesion {
+    
+    @include m.boton(v.$naranja,v.$blanco);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}

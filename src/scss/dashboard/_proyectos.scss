@@ -1,0 +1,54 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.no-proyectos {
+
+    a {
+
+        color: v.$naranja;
+
+    }
+
+}
+
+.listado-proyectos {
+
+    list-style: none;
+    padding: 0;
+
+    display: grid;
+    gap: 2rem;
+
+    @include m.tablet {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include m.desktop {
+        grid-template-columns: repeat(3,1fr); 
+    }
+
+    .proyecto {
+
+        background-color: v.$naranja;
+        border-radius: 1rem;
+        
+        min-height: 10rem;
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        line-height: 1.5;
+
+        a {
+            color: v.$blanco;
+            width: 100%;
+            text-align: center;
+        }
+
+        &:hover {
+
+            background-color: darken(v.$naranja, 10%);
+
+        }
+    }
+
+}

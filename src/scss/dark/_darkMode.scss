@@ -1,0 +1,142 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+@media (prefers-color-scheme: dark){
+    
+    body {
+        background-color: darken(v.$gris, 30);
+    }
+    
+    .tagline,
+    .descripcion-pagina,
+    .formulario label,
+    .login .acciones a,
+    .crear .acciones a,
+    .olvidar .acciones a {
+        color: v.$blanco;
+    }
+    
+    .formulario input {
+        background-color: darken(v.$gris, 30);
+        color: v.$blanco;
+    }
+    
+    .alerta.error,
+    .alerta.exito{
+        background-color: v.$blanco;
+    }
+    
+    .dashboard {
+        background-color: darken(v.$gris, 30);
+        
+        .nombre-pagina{
+            color: v.$blanco;
+        }
+        
+        .barra-mobile {
+            background-color: darken(v.$gris, 30);
+        }
+    }
+    
+    .sidebar.mostrar{
+        background-color: darken(v.$gris, 30);
+        
+    }
+    
+    .sidebar{
+        background-color: darken(v.$gris, 10);
+    }
+    .listado-proyectos .proyecto {
+        background-color: darken(v.$gris, 10);
+        
+        &:hover {
+            background-color: darken(v.$negro, 10);
+            color: v.$blanco;
+        }
+    }
+    
+    .nueva-tarea .agregar-tarea {
+        background-color: darken(v.$gris, 10);
+        
+        &:hover {
+            background-color: darken(v.$negro, 10);
+            color: v.$blanco;
+        }
+    }
+    
+    .filtros {
+        background-color: darken(v.$gris, 10);
+        
+        h2 {
+            color: v.$blanco;
+        }
+        
+        label {
+            color: v.$blanco;
+        }
+        
+        input[type=radio] {
+            accent-color:  v.$negro;
+        }
+    }
+    
+    .boton,
+    .formulario input[type=submit] {
+        background-color: darken(v.$gris, 10);
+        color: v.$blanco;
+        &:hover {
+            background-color: darken(v.$negro, 10);
+            color: v.$blanco;
+        }
+    }
+    
+    //Barra
+    .barra {
+        p{
+            color: v.$blanco;
+        }
+    }
+    
+    //Tareas {
+    .tarea p {
+        color: v.$blanco;
+    }
+    
+    .cerrar-sesion {
+        background-color: darken(v.$gris, 10);
+        color: v.$blanco;
+        &:hover {
+            background-color: darken(v.$negro, 10);
+            color: v.$blanco;
+        }
+    }
+    
+    //Modal
+    .modal .formulario legend {
+        color: v.$blanco;
+    }
+    .modal .formulario.animar {
+        background-color: darken(v.$gris, 10);
+    }
+    
+    .modal .formulario .cerrar-modal {
+        background-color: v.$blanco;
+        color: v.$negro;
+
+        &:hover{
+            background-color: v.$blanco;
+        color: v.$negro;
+        }
+        
+    }
+    .modal .formulario .submit-nueva-tarea {
+        background-color: darken(v.$negro, 10);
+        color: v.$blanco;
+
+        &:hover{
+            background-color: darken(v.$negro, 10);
+        color: v.$blanco;
+        }
+    }
+    
+}

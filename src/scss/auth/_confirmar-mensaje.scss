@@ -1,0 +1,12 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.confirmar-mensaje {
+
+    .titulo {
+        
+        @include m.textoDegradado(v.$azul);
+        
+    }
+
+}

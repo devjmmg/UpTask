@@ -1,0 +1,14 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.boton {
+    background-color: v.$naranja;
+    padding: 1rem;
+    color: v.$blanco;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    display: inline-block;
+    &:hover {
+        background-color: darken(v.$naranja, 10);
+    }
+}
